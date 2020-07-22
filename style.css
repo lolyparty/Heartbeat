@@ -1,0 +1,58 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heart{
+    height:90px;
+    width:90px;
+    background:rgba(250, 0 , 0, 1);    
+    position:absolute;
+    top:50%;
+    margin:0px;
+    transform: rotate(45deg);
+}
+
+.heart::before, .heart::after{
+    content:'';
+    height: 90px;
+    width: 90px;
+    position:absolute;
+    background:rgba(250, 0 , 0, 1);    
+    transform: rotate(0deg);
+}
+
+.heart::before{
+    right:80px;
+    border-radius: 100% 0px 0px 100%;
+}
+
+.heart::after{
+    bottom:80px;
+    border-radius: 100% 100% 0px 0%;
+}
+
+@keyframes heartbeat {
+    0%{
+        transform: rotate(45deg) scale(1);
+        animation-timing-function: ease-in;
+    }
+    25%{
+        transform: rotate(45deg) scale(1.05);
+        animation-timing-function: ease-out;
+    }
+    75%{
+        transform: rotate(45deg) scale(1.15);
+        animation-timing-function: ease-in;
+    }
+    100%{
+        transform: rotate(45deg) scale(1.5);
+        animation-timing-function: ease-out;
+    }
+}
