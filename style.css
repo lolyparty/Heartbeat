@@ -38,21 +38,9 @@ body{
     border-radius: 100% 100% 0px 0%;
 }
 
-@keyframes heartbeat {
-    0%{
-        transform: rotate(45deg) scale(1);
-        animation-timing-function: ease-in;
-    }
-    25%{
-        transform: rotate(45deg) scale(1.05);
-        animation-timing-function: ease-out;
-    }
-    75%{
-        transform: rotate(45deg) scale(1.15);
-        animation-timing-function: ease-in;
-    }
-    100%{
-        transform: rotate(45deg) scale(1.5);
-        animation-timing-function: ease-out;
-    }
+.timer{
+    color:red;
+    position: absolute;
+    top:25%;
+    display:none;
 }
